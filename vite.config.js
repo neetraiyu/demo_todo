@@ -11,4 +11,14 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    build: {
+        manifest: true,
+        outDir: 'public/build',
+        emptyOutDir: true, // Optional
+        rollupOptions: {
+            input: {
+                app: 'resources/js/app.js', // Entry point for your app
+            },
+        },
+    },
 });
